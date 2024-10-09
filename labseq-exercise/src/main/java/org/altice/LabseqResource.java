@@ -7,6 +7,8 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import java.math.BigInteger;
 import java.util.regex.Pattern;
 
 /**
@@ -39,7 +41,7 @@ public class LabseqResource {
         }
 
         int n = Integer.parseInt(nStr);
-        long result = calculator.calculateLabseq(n);
+        BigInteger result = calculator.calculateLabseq(n);
         return Response.ok(String.valueOf(result)).build();
     }
 

@@ -1,8 +1,35 @@
+/* Limita a largura máxima do container principal */
 .container {
     max-width: 500px;
     margin-top: 50px;
 }
 
+/* Esconde o container de erros por padrão */
 #errorContainer {
     display: none;
+}
+
+/* Estilo para o container de resultados */
+#resultsContainer {
+    max-height: 300px; /* Limita a altura do container */
+    overflow-y: auto; /* Adiciona scroll quando necessário */
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Estilo para cada item da lista de resultados */
+.list-group-item {
+    word-wrap: break-word; /* Quebra o texto longo */
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 10px;
 }

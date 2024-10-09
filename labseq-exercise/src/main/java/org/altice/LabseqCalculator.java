@@ -2,6 +2,7 @@ package org.altice;
 
 import jakarta.inject.Singleton;
 
+import java.math.BigInteger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -13,13 +14,13 @@ import java.util.concurrent.ConcurrentHashMap;
 public class LabseqCalculator {
 
     // Cache para armazenar valores previamente calculados da sequência
-    private final Map<Integer, Long> cache;
+    private final Map<Integer, BigInteger> cache;
 
     // Valores iniciais da sequência
-    private static final long INITIAL_VALUE_L0 = 0L;
-    private static final long INITIAL_VALUE_L1 = 1L;
-    private static final long INITIAL_VALUE_L2 = 0L;
-    private static final long INITIAL_VALUE_L3 = 1L;
+    private static final BigInteger INITIAL_VALUE_L0 = BigInteger.ZERO;
+    private static final BigInteger INITIAL_VALUE_L1 = BigInteger.ONE;
+    private static final BigInteger INITIAL_VALUE_L2 = BigInteger.ZERO;
+    private static final BigInteger INITIAL_VALUE_L3 = BigInteger.ONE;
 
     public LabseqCalculator() {
         cache = new ConcurrentHashMap<>();
@@ -36,7 +37,7 @@ public class LabseqCalculator {
      * @param n índice da sequência
      * @return valor da sequência no índice n
      */
-    public long calculateLabseq(int n) {
+    public BigInteger calculateLabseq(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("O índice não pode ser negativo.");
         }
@@ -47,7 +48,7 @@ public class LabseqCalculator {
         }
 
         // Calcula recursivamente e armazena no cache
-        long result = calculateLabseq(n - 4) + calculateLabseq(n - 3);
+        BigInteger result = calculateLabseq(n - 4).add(calculateLabseq(n - 3));
         cache.put(n, result);
         return result;
     }
