@@ -60,6 +60,8 @@ onde `{n}` representa o índice desejado da sequência.
 Clone o repositório para ter acesso ao código-fonte:
 ```bash
 git clone https://github.com/MiguelSilvaIT/Exercicio_Altice.git
+```
+```bash
 cd Exercicio_Altice/labseq-exercise
 ```
 
