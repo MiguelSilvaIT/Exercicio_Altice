@@ -1,0 +1,73 @@
+# Diretórios e arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos do IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+*.ipr
+# Settings do projeto, versão específica do IDE
+.idea/workspace.xml
+.idea/libraries/
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/vcs.xml
+
+# IntelliJ Plugin settings
+.idea/jsLibraryMappings.xml
+
+# Diretórios específicos de compilação Maven
+target/
+*.jar
+*.war
+*.ear
+*.log
+
+# Arquivos do Quarkus
+.quarkus/
+
+# Arquivos de configuração local do IntelliJ
+.idea/
+
+# Arquivos do VSCode (caso uses ocasionalmente)
+.vscode/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Arquivos de ambiente do sistema
+.env
+.env.*local
+
+# Arquivos de Cache específicos
+.cache/
+.quarkus/
+node_modules/
+
+# Configuração Angular e Node.js
+**/node_modules/
+**/dist/
+**/build/
+
+# Dependências locais e builds no Angular
+.angular/
+.angular/cache/
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs do SO e ambiente de desenvolvimento
+logs/
+*.log
+
+# Arquivos e diretórios de backups
+*.bak
+*.swp
+*.swo
