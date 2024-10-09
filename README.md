@@ -1,10 +1,7 @@
 
 # 🚀 Projeto LabSeq - Desafio Altice Labs
 
-![Java](https://img.shields.io/badge/java-17%2B-blue)
-
-![Quarkus](https://img.shields.io/badge/Quarkus-2.x-blue)
-
+![Java](https://img.shields.io/badge/java-17%2B-blue)     ![Quarkus](https://img.shields.io/badge/Quarkus-2.x-blue)    
 ![Last Commit](https://img.shields.io/github/last-commit/MiguelSilvaIT/Exercicio_Altice)
 
 
@@ -52,6 +49,12 @@ onde `{n}` representa o índice desejado da sequência.
 
 ## 🚀 Instruções de Execução
 
+### Requisitos
+- **Java** 17 ou superior
+- **Maven** 3.6 ou superior
+- **Docker** (para criação e execução do container)
+
+
 ### Clonagem do Repositório
 
 Clone o repositório para ter acesso ao código-fonte:
@@ -86,6 +89,14 @@ Após a execução, a API REST estará disponível em `http://localhost:8080`.
 
 Basta abrir o ficheiro `index.html` num navegador para aceder à interface do utilizador.
 
+### Executar Testes Unitários
+Para garantir que o código está a funcionar como esperado, execute os testes unitários configurados com JUnit:
+```bash
+mvn test
+```
+
+Os resultados dos testes serão exibidos no terminal. Certifique-se de que todos os testes foram bem-sucedidos antes de continuar.
+
 ## 🧩 Arquitetura e Design
 
 1. **Desempenho**: A implementação é otimizada para cálculos rápidos, com caching em diferentes camadas para minimizar recalculações.
@@ -94,7 +105,7 @@ Basta abrir o ficheiro `index.html` num navegador para aceder à interface do ut
 
 ## 📖 Documentação Completa da API
 
-A documentação OpenAPI (Swagger) pode ser acedida em [Swagger UI](http://localhost:8080/q/swagger-ui) ao executar o backend.
+A documentação OpenAPI (Swagger) pode ser acedida em [Swagger UI](http://localhost:8080/q/swagger-ui) depois do backend ser executado.
 
 ## 🔍 Assunções e Limitações
 
@@ -104,6 +115,5 @@ Este projeto assume:
 - **Manutenção de Performance**: Testado para garantir o cálculo de valores altos, como `l(10000)`, em menos de 10 segundos.
 
 
----
 
 > **Nota**: Este projeto foi desenvolvido com atenção aos requisitos de performance e boas práticas de desenvolvimento em Java, visando fornecer um exemplo robusto e escalável.
