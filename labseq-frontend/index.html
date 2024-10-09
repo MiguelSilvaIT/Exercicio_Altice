@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labseq Sequence Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar with Altice Labs Logo -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/altice-labs-logo.png" class="d-inline-block align-top" alt="Altice Labs Logo">
+        </a>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1 class="text-center my-4">Labseq Sequence Calculator</h1>
+        
+        <div class="form-group">
+            <label for="indexInput">Enter a non-negative integer:</label>
+            <input type="number" id="indexInput" class="form-control" placeholder="Enter an integer" min="0">
+            <small class="form-text text-muted">Only non-negative integers are allowed.</small>
+        </div>
+        
+        <button id="calculateButton" class="btn btn-primary btn-block">Calculate</button>
+
+        <div id="resultContainer" class="mt-4">
+            <h2>Result: <span id="result"></span></h2>
+        </div>
+
+        <div id="errorContainer" class="mt-4 text-danger">
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
