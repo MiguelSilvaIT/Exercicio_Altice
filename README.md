@@ -57,21 +57,27 @@ onde `{n}` representa o índice desejado da sequência.
 Clone o repositório para ter acesso ao código-fonte:
 ```bash
 git clone https://github.com/MiguelSilvaIT/Exercicio_Altice.git
-cd Exercicio_Altice
+cd Exercicio_Altice/labseq-exercise
 ```
 
 ### Backend - Quarkus com Docker
 
-#### 1. Construção da Imagem Docker
-Crie a imagem Docker do backend:
+#### 1. Construção do Projeto com Maven
+Empacote o projeto com Maven para criar os arquivos necessários na pasta `target`:
 ```bash
-docker build -t labseq-backend .
+mvn package
 ```
 
-#### 2. Execução do Container
+#### 2. Construção da Imagem Docker
+Crie a imagem Docker do backend usando o Dockerfile correto:
+```bash
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/labseq-exercise-jvm .
+```
+
+#### 3. Execução do Container
 Execute o container:
 ```bash
-docker run -p 8080:8080 labseq-backend
+docker run -p 8080:8080 quarkus/labseq-exercise-jvm
 ```
 
 Após a execução, a API REST estará disponível em `http://localhost:8080`.
@@ -97,10 +103,6 @@ Este projeto assume:
 - **Caching Completo**: Utilizamos caching para melhorar o desempenho geral. Valores já calculados são armazenados para chamadas subsequentes.
 - **Manutenção de Performance**: Testado para garantir o cálculo de valores altos, como `l(10000)`, em menos de 10 segundos.
 
-## 🌱 Possibilidades de Expansão
-
-- **Frontend Angular**: Para interfaces mais dinâmicas e ricas, um frontend em Angular está nos planos de expansão.
-- **Deployment em Cloud**: Facilidade de expansão para plataformas como Kubernetes para escalabilidade empresarial.
 
 ---
 
