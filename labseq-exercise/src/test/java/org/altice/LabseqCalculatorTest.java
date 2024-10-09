@@ -2,6 +2,9 @@ package org.altice;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.math.BigInteger;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LabseqCalculatorTest {
@@ -15,10 +18,10 @@ public class LabseqCalculatorTest {
 
     @Test
     public void testInitialValues() {
-        assertEquals(0, calculator.calculateLabseq(0));
-        assertEquals(1, calculator.calculateLabseq(1));
-        assertEquals(0, calculator.calculateLabseq(2));
-        assertEquals(1, calculator.calculateLabseq(3));
+        assertEquals(BigInteger.ZERO, calculator.calculateLabseq(0));
+        assertEquals(BigInteger.ONE, calculator.calculateLabseq(1));
+        assertEquals(BigInteger.ZERO, calculator.calculateLabseq(2));
+        assertEquals(BigInteger.ONE, calculator.calculateLabseq(3));
     }
 
     @Test
